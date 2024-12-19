@@ -9,6 +9,7 @@ import time
 from functools import wraps
 import json
 from typing import List, Dict, Optional, Generator
+import unittest
 
 # 1. Data Structures and Algorithms
 def find_first_non_repeating(s: str) -> Optional[str]:
@@ -19,17 +20,43 @@ def find_first_non_repeating(s: str) -> Optional[str]:
         s: Input string
     Returns:
         First non-repeating character or None if not found
+        
+    Examples:
+        >>> find_first_non_repeating("leetcode")
+        'l'
+        >>> find_first_non_repeating("loveleetcode") 
+        'v'
+        >>> find_first_non_repeating("aabb")
+        None
     """
-    pass
+    raise NotImplementedError("Not implemented")
 
 # 2. Python-Specific Features
 def measure_time(func):
     """
     Decorator that measures the execution time of a function.
+    
+    Examples:
+        >>> @measure_time
+        ... def slow_function():
+        ...     time.sleep(1)
+        ...     return "Done"
+        >>> result = slow_function()
+        Function 'slow_function' took 1.001 seconds to execute
+        >>> result
+        'Done'
+        
+        >>> @measure_time
+        ... def fast_function():
+        ...     return sum(range(1000))
+        >>> result = fast_function() 
+        Function 'fast_function' took 0.0001 seconds to execute
+        >>> result
+        499500
     """
     @wraps(func)
     def wrapper(*args, **kwargs):
-        pass
+        raise NotImplementedError("Not implemented")
     return wrapper
 
 # 4. Error Handling and Testing
@@ -45,7 +72,7 @@ def read_json_file(filepath: str) -> Dict:
         FileNotFoundError: If file doesn't exist
         json.JSONDecodeError: If JSON is invalid
     """
-    pass
+    raise NotImplementedError("Not implemented")
 
 # MNIST Related Tasks
 def load_mnist():
@@ -55,7 +82,7 @@ def load_mnist():
     Returns:
         train_loader, test_loader
     """
-    pass
+    raise NotImplementedError("Not implemented")
 
 def visualize_mnist_samples(samples: int = 9):
     """
@@ -64,7 +91,7 @@ def visualize_mnist_samples(samples: int = 9):
     Args:
         samples: Number of samples to visualize
     """
-    pass
+    raise NotImplementedError("Not implemented")
 
 class SimpleCNN(nn.Module):
     # The architecture is not important, just a simple CNN
@@ -76,7 +103,7 @@ class SimpleCNN(nn.Module):
 
     def forward(self, x):
         # Implement the forward pass
-        pass
+        raise NotImplementedError("Not implemented")
 
 def train_model(model: nn.Module, train_loader: DataLoader, epochs: int = 5):
     """
@@ -87,9 +114,4 @@ def train_model(model: nn.Module, train_loader: DataLoader, epochs: int = 5):
         train_loader: Training data loader
         epochs: Number of training epochs
     """
-    pass
-
-
-if __name__ == "__main__":
-    # Add your main execution code here
-    pass
+    raise NotImplementedError("Not implemented")
